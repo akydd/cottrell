@@ -1,0 +1,51 @@
+\documentclass{tufte-book}
+
+% Book metadata
+\title{The Sanctuary \\ Doctrine--\\Asset or Liability?}
+\author{Raymond F. Cottrell, D. Div}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+%%
+% Prints a trailing space in a smart way.
+\usepackage{xspace}
+
+\usepackage{units}
+
+\usepackage{makeidx}
+\makeindex
+
+\begin{document}
+
+\frontmatter
+
+\blankpage
+
+% title page
+\maketitle
+
+\tableofcontents
+
+% intro
+\cleardoublepage
+\input{introduction.tex}
+
+\mainmatter
+
+\input{part1.tex}
+\input{part2.tex}
+
+\backmatter
+
+\bibliography{cottrell}
+\bibliographystyle{plainnat}
+
+%\printindex
+
+\end{document}
